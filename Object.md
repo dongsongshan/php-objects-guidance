@@ -59,7 +59,7 @@ echo $product1->price;//这边输出 20
 当我们要获取名字(full name)：我们可以这样做：
 
 ```php
-echo $product1->firstName." ".$product1->secondName(); //super U
+echo $product1->firstName." ".$product1->secondName; //super U
 ```
 
 太麻烦了实在。如果能让对象代替我们处理这件苦差事就好了。请看下面的使用方法。
@@ -88,7 +88,7 @@ class ShopProduct
   //注意类方法也可以声明成public\protected\private
   public function getFullName()
   {
-     return  $product1->firstName." ".$product1->secondName(); 
+     return  $this->firstName." ".$this->secondName; 
   }
 }
 ```
@@ -139,7 +139,7 @@ class ShopProduct
   
   public function getFullName()
   {
-     return  $product1->firstName." ".$product1->secondName(); 
+     return  $this->firstName." ".$this->secondName; 
   }
 }
 ```
@@ -232,7 +232,7 @@ class ShopProduct
   //注意类方法也可以声明成public\protected\private
   public function getFullName()
   {
-     return  $this->firstName." ".$this->secondName(); 
+     return  $this->firstName." ".$this->secondName; 
   }
 }
 ```
